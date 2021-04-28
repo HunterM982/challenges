@@ -9,14 +9,17 @@ void print_array(int arr[],int n){
     }
 }
 // right now assume that nelems is even for simplicity
-int a_merge
 
-int mergesort(int *a, int nelems){
-   /*
+void mergesort(int *a, int nelems){
+
     if(nelems == 1){
-        return *a;
+        //break;
     }
+    
+    int *b = &a[nelems/2];
+    print_array(b,nelems);
 
+    /*
     size_t newsize = nelems/2;
     int a1[newsize], a2[newsize];
     for(int i = 0; i < newsize; i++){
@@ -24,19 +27,18 @@ int mergesort(int *a, int nelems){
         a2[i] = a[i+(newsize)];
     }
 
-    a1 = mergesort(a1,newsize);
+    mergesort(a1,newsize);
     mergesort(a2,newsize);
 
     return a_merge()
     */
 }
 
-void merge
-
 int main(void){
 
     int array[10] = {0,3,1,2,15,36,5,69,894,9};
     print_array(array,NELEMS(array));
-    new_array = 
+    mergesort(array,NELEMS(array));
+    //print_array(array,NELEMS(array));
     
 }
